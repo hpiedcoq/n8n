@@ -46,11 +46,6 @@ RUN git clone https://github.com/megadose/toutatis.git && \
     python3 toutatis/setup.py install
 
 
-RUN git clone https://github.com/h51un6/email2github.git && \
-    pip3 install -r email2github/requirements.txt && \
-    mkdir email2github/tmp
-
-COPY tmp/auth.json email2github/tmp/auth.json 
 
 
 COPY torrc /etc/tor/torrc
