@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  n8n:
+    
+    image: n8n
+    build: 
+
+      context: .
+    ports: 
+      - "127.0.0.1:5678:5678"
+    volumes:
+      - ./n8n:/home/node/.n8n
+    
+    deploy:
+      resources:
+        limits:
+          memory: 4000m
+          cpus: "2"
+        reservations:
+          memory: 2000m
+
+      
