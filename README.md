@@ -10,6 +10,8 @@ n8n is an open-source automation tool. https://github.com/n8n-io/n8n
 
 You need docker and docker-compose on your machine to use this app.
 
+This should work on a raspberry pi, like a charm.
+
 
 ### Building and run the image
 
@@ -23,4 +25,15 @@ In order to use these packages, simply create a workflow that will contain the "
 
 To use TOR, simply  use the command ```torify curl http://monip.org```.
 
-Using this, you will be able to use the generate content in n8n. 
+Using this, you will be able to use the generated content in n8n. 
+
+
+### Persistence
+
+The data are stored in the n8n directory for persistence.
+
+### Usage
+
+Once launched, just type in your browser : ```localhost:5678```
+
+Enjoy n8n.

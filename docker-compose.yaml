@@ -7,16 +7,17 @@ services:
 
       context: .
     ports: 
-      - "127.0.0.1:5678:5678"
+      - "5678:5678"
+    network_mode: bridge
     volumes:
       - ./n8n:/root/.n8n
     
     deploy:
       resources:
         limits:
-          memory: 4000m
-          cpus: "2"
+          memory: 1000m
+          cpus: "1"
         reservations:
-          memory: 2000m
+          memory: 500m
 
       
