@@ -15,8 +15,11 @@ This should work on a raspberry pi, like a charm.
 
 ### Building and run the image
 
-```docker-compose up -d``` should do the trick.
+Create an empty n8n directory at the root of the directory.
 
+Then just type : ```docker-compose up -d``` which should do the trick : build the image and start n8n.
+
+To stop n8n, type : ```docker-compose down```.
 ### Useful addons
 
 n8n is already a really powerful tool. But I add some useful python packages such as js, trafilatura, dnstools to enhance its possibilities.
