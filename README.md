@@ -10,7 +10,7 @@ n8n is an open-source automation tool. https://github.com/n8n-io/n8n
 
 You need docker and docker-compose on your machine to use this app.
 
-This should work on a raspberry pi, like a charm.
+This should work on a raspberry pi, like a charm. For this purpose, the docker-compose.yaml file is set to 500mb of memory and one processor. If your machine is more powerful, don't hesitateto allow more! ;)
 
 
 ### Building and run the image
