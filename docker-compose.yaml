@@ -11,6 +11,17 @@ services:
     network_mode: bridge
     volumes:
       - ./n8n:/root/.n8n
+    environment:
+      - N8N_CUSTOM_EXTENSIONS=/root/.n8n/     
+      #- N8N_HOST=yourdomainhere
+      #- N8N_PROTOCOL=https
+      #- N8N_EMAIL_MODE=smtp
+      #- N8N_SMTP_HOST=mail.xxxxx.xxxxx
+      #- N8N_SMTP_PORT=465
+      #- N8N_SMTP_SSL=true
+      #- N8N_SMTP_USER=yourmailaddress
+      #- N8N_SMTP_PASS=yourpassword
+      #- N8N_SMTP_SENDER=N8N
     
     deploy:
       resources:

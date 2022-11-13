@@ -45,7 +45,18 @@ RUN pip3 install --upgrade pip && \
 RUN git clone https://github.com/megadose/toutatis.git && \
     python3 toutatis/setup.py install
 
+RUN apt install --no-install-recommends -y chromium \
+      yarn
 
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+
+
+
+RUN cd /usr/local/lib/node_modules/n8n && \
+    npm i n8n-nodes-puppeteer-extended &&\
+    npm i n8n-nodes-text-manipulation &&\
+    npm i n8n-nodes-telegram-polling
 
 
 COPY torrc /etc/tor/torrc
@@ -53,6 +64,8 @@ COPY torsocks.conf /etc/tor/torsocks.conf
 COPY tor.sh /app/tor.sh
 
 RUN chmod +x /app/tor.sh
+
+
 
 EXPOSE 5678
 
